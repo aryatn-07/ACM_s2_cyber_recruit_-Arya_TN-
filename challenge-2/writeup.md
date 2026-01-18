@@ -8,4 +8,4 @@ COMMANDS USED :
 file image.jpg
 xxd image.jpg
 
-Flag: flag{jai_mahismathi)
+Flag: flag{jai_mahismathi}
