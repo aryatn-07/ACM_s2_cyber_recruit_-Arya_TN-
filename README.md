@@ -9,7 +9,7 @@ I’m a S2 AI&DS student focused on learning cybersecurity through hands-on prac
 - Current skills: Linux basics
 ## Why I want to join this club
 - I heard about the contributions and opportunities the club provides and got interested in it.
-- I want to learn from seniors, collaborate on challenges, and contribute back to the group.the gheydthr hhdtbrh
+- I want to learn from seniors, collaborate on challenges, and contribute back to the group.
 - I want to practice both attacker and defender thinking (find issues, document them clearly, and learn remediation). 
 
 
