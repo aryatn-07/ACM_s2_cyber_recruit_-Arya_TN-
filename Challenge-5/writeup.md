@@ -27,7 +27,7 @@ As i didn't know anything about SQLi, I took the assistance of Chatgpt for this 
 first i created the challenge database,
 So ran MySQL, put this query in it
 
-CREATE DATABASE sqli_challenge;
+CREATE DATABASE sqli_challenge;  
 USE sqli_challenge;
 
 users table
@@ -36,14 +36,14 @@ CREATE TABLE users (
     pw VARCHAR(50)
 );
 
-the database was empty so insert users,
-INSERT INTO users VALUES ('guest', 'guest');
-INSERT INTO users VALUES ('admin', 'SUPERSECRET');
+the database was empty so insert users,  
+INSERT INTO users VALUES ('guest', 'guest');  
+INSERT INTO users VALUES ('admin', 'SUPERSECRET');  
 
-create MySQL user for PHP
-CREATE USER 'teni'@'localhost' IDENTIFIED BY 'teni';
-GRANT ALL PRIVILEGES ON sqli_challenge.* TO 'teni'@'localhost';
-FLUSH PRIVILEGES;
+create MySQL user for PHP  
+CREATE USER 'teni'@'localhost' IDENTIFIED BY 'teni';  
+GRANT ALL PRIVILEGES ON sqli_challenge.* TO 'teni'@'localhost';  
+FLUSH PRIVILEGES;  
 
 EXIT;
 
